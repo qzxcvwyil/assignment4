@@ -1,0 +1,176 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f0e8;
+    color: #29231f;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    margin-top: 0;
+}
+
+section {
+    padding: 50px 0;
+}
+
+/* navbar */
+.navbar {
+    background: #29231f;
+}
+
+.navbar-brand {
+    color: white;
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.nav-link {
+    color: white;
+}
+
+.nav-link:hover {
+    color: #d9795b;
+}
+
+.navbar-toggler {
+    background: white;
+}
+
+.intro {
+    background: #f5f0e8;
+}
+
+.intro h1 {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.intro h2 {
+    font-size: 20px;
+    color: #b75d45;
+    margin-bottom: 10px;
+}
+
+.intro p {
+    font-size: 14px;
+    margin-bottom: 0;
+}
+
+@media (min-width: 768px) {
+    .intro h1 {
+        font-size: 40px;
+    }
+
+    .intro h2 {
+        font-size: 26px;
+    }
+
+    .intro p {
+        font-size: 17px;
+    }
+}
+
+@media (min-width: 992px) {
+    .intro h1 {
+        font-size: 52px;
+    }
+
+    .intro h2 {
+        font-size: 32px;
+    }
+
+    .intro p {
+        font-size: 20px;
+    }
+}
+
+.part1 {
+    background: white;
+}
+
+.part2 {
+    background: #ebe2d3;
+}
+
+.part3 {
+    background: #f5f0e8;
+}
+
+section h2 {
+    margin-bottom: 25px;
+}
+
+.form-box {
+    padding: 25px;
+    background: white;
+    border: 1px solid #ddd2c2;
+    border-radius: 10px;
+}
+
+.part1 .form-box {
+    background: #f5f0e8;
+}
+
+.part1 label {
+    font-weight: bold;
+}
+
+.part1 input,
+.part1 textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 4px;
+    border: 1px solid #ddd2c2;
+    border-radius: 6px;
+}
+
+.part1 button {
+    padding: 8px 20px;
+    background: #b75d45;
+    color: white;
+    border: none;
+    border-radius: 6px;
+}
+
+.part1 button:hover {
+    background: #9c4a34;
+}
+
+.btn-primary {
+    background: #b75d45;
+    border-color: #b75d45;
+}
+
+.btn-primary:hover {
+    background: #9c4a34;
+    border-color: #9c4a34;
+}
+
+.btn-outline-secondary {
+    color: #29231f;
+    border-color: #29231f;
+}
+
+.btn-outline-secondary:hover {
+    background: #29231f;
+    border-color: #29231f;
+}
+
+footer {
+    padding: 20px 0;
+    background: #29231f;
+    color: white;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+    color: white;
+}

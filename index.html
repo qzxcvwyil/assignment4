@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assignment 4 - Forms and Validation</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand" href="#">Assignment 4</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainMenu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#part1">Part 1</a></li>
+          <li class="nav-item"><a class="nav-link" href="#part2">Part 2</a></li>
+          <li class="nav-item"><a class="nav-link" href="#part3">Part 3</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section class="intro">
+    <div class="container">
+      <h1>Forms and Validation</h1>
+      <h2>Assignment 4</h2>
+      <p>HTML forms, Bootstrap forms and a registration form with validation.</p>
+    </div>
+  </section>
+
+    <section class="part1" id="part1">
+      <div class="container">
+      <h2>Part 1. Basic HTML Forms</h2>
+      <div class="form-box">
+      <form action="#" method="post">
+        <label for="p1Name">Name</label><br>
+        <input type="text" id="p1Name" name="name" required minlength="2" maxlength="50"><br><br>
+
+        <label for="p1Email">Email</label><br>
+        <input type="email" id="p1Email" name="email" required><br><br>
+
+        <label for="p1Message">Message</label><br>
+        <textarea id="p1Message" name="message" rows="5" cols="40" required minlength="10" maxlength="500"></textarea><br><br>
+
+        <button type="submit">Send</button>
+      </form>
+      </div>
+      </div>
+    </section>
+
+    <section class="part2" id="part2">
+      <div class="container">
+      <h2>Part 2. Bootstrap Forms</h2>
+      <div class="form-box">
+      <form action="#" method="post" novalidate>
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <label for="p2Name" class="form-label">Name</label>
+            <input type="text" class="form-control" id="p2Name" name="name" placeholder="Your name" required minlength="2">
+            <div class="form-text">Enter your full name.</div>
+            <div class="valid-feedback">Looks good!</div>
+            <div class="invalid-feedback">Name is required (min 2 characters)</div>
+          </div>
+          <div class="col-md-6 mb-3">
+            <label for="p2Email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="p2Email" name="email" placeholder="name@example.com" required>
+            <div class="form-text">We will never share your email.</div>
+            <div class="valid-feedback">Looks good!</div>
+            <div class="invalid-feedback">Email is required</div>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label for="p2Message" class="form-label">Message</label>
+          <textarea class="form-control" id="p2Message" name="message" rows="5" placeholder="Write your message here..." required minlength="10"></textarea>
+          <div class="form-text">Minimum 10 characters.</div>
+          <div class="valid-feedback">Looks good!</div>
+          <div class="invalid-feedback">Message is required (min 10 characters)</div>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Send</button>
+      </form>
+      </div>
+      </div>
+    </section>
+
+    <section class="part3" id="part3">
+      <div class="container">
+      <h2>Part 3. Registration Form</h2>
+      <div class="form-box">
+      <form action="#" method="post" novalidate>
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <label for="firstName" class="form-label">First Name</label>
+            <input type="text" class="form-control" id="firstName" name="firstName" placeholder="First name" required minlength="2">
+            <div class="valid-feedback">Looks good!</div>
+            <div class="invalid-feedback">First name is required</div>
+          </div>
+          <div class="col-md-6 mb-3">
+            <label for="lastName" class="form-label">Last Name</label>
+            <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Last name" required minlength="2">
+            <div class="valid-feedback">Looks good!</div>
+            <div class="invalid-feedback">Last name is required</div>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label for="regEmail" class="form-label">Email</label>
+          <input type="email" class="form-control" id="regEmail" name="email" placeholder="name@example.com" required>
+          <div class="valid-feedback">Looks good!</div>
+          <div class="invalid-feedback">Please enter a valid email</div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <label for="password" class="form-label">Password</label>
+            <input type="password" class="form-control" id="password" name="password" placeholder="Password" required minlength="8">
+            <div class="form-text">Minimum 8 characters.</div>
+            <div class="valid-feedback">Looks good!</div>
+            <div class="invalid-feedback">Password must be at least 8 characters</div>
+          </div>
+          <div class="col-md-6 mb-3">
+            <label for="confirmPassword" class="form-label">Confirm Password</label>
+            <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" placeholder="Repeat password" required>
+            <div class="valid-feedback">Passwords match!</div>
+            <div class="invalid-feedback">Passwords do not match</div>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <span class="form-label d-block">Gender</span>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="gender" id="genderMale" value="male" required>
+            <label class="form-check-label" for="genderMale">Male</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="gender" id="genderFemale" value="female">
+            <label class="form-check-label" for="genderFemale">Female</label>
+          </div>
+          <div id="genderError" class="text-danger small d-none">Please select your gender</div>
+        </div>
+
+        <div class="mb-3">
+          <span class="form-label d-block">Hobbies</span>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" name="hobbies" id="hobbyReading" value="reading">
+            <label class="form-check-label" for="hobbyReading">Reading</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" name="hobbies" id="hobbySports" value="sports">
+            <label class="form-check-label" for="hobbySports">Sports</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" name="hobbies" id="hobbyMusic" value="music">
+            <label class="form-check-label" for="hobbyMusic">Music</label>
+          </div>
+        </div>
+
+        <div class="mb-4">
+          <label for="country" class="form-label">Country</label>
+          <select class="form-select" id="country" name="country" required>
+            <option value="" selected disabled>Choose...</option>
+            <option value="kz">Kazakhstan</option>
+            <option value="ru">Russia</option>
+            <option value="tr">Turkey</option>
+            <option value="de">Germany</option>
+          </select>
+          <div class="valid-feedback">Looks good!</div>
+          <div class="invalid-feedback">Please select a country</div>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="reset" class="btn btn-outline-secondary">Reset</button>
+      </form>
+      </div>
+      </div>
+    </section>
+
+  <footer>
+    <div class="container">
+      <p>Here is the end of assignment 4</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    function validateFields(form) {
+      const fields = form.querySelectorAll(".form-control, .form-select");
+      let allValid = true;
+
+      fields.forEach(function (field) {
+        if (field.id === "confirmPassword") {
+          const password = form.querySelector("#password");
+          if (field.value !== password.value) {
+            field.setCustomValidity("Passwords do not match");
+          } else {
+            field.setCustomValidity("");
+          }
+        }
+
+        if (field.checkValidity()) {
+          field.classList.remove("is-invalid");
+          field.classList.add("is-valid");
+        } else {
+          field.classList.remove("is-valid");
+          field.classList.add("is-invalid");
+          allValid = false;
+        }
+      });
+
+      return allValid;
+    }
+
+    const form2 = document.querySelector("#part2 form");
+    form2.addEventListener("submit", function (event) {
+      event.preventDefault();
+      validateFields(form2);
+    });
+
+    const form3 = document.querySelector("#part3 form");
+    const genderError = document.getElementById("genderError");
+
+    form3.addEventListener("submit", function (event) {
+      event.preventDefault();
+      validateFields(form3);
+
+      if (form3.querySelector("input[name='gender']:checked")) {
+        genderError.classList.add("d-none");
+      } else {
+        genderError.classList.remove("d-none");
+      }
+    });
+
+    form3.addEventListener("reset", function () {
+      form3.querySelectorAll(".is-valid, .is-invalid").forEach(function (field) {
+        field.classList.remove("is-valid", "is-invalid");
+      });
+      document.getElementById("confirmPassword").setCustomValidity("");
+      genderError.classList.add("d-none");
+    });
+  </script>
+</body>
+</html>
